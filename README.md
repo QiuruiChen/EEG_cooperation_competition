@@ -30,12 +30,12 @@ In the future work, experiments could be redesigned to better imitate cooperativ
 
 ## Software Packages 
 - EEGLab
-- BCT: {Brain Connectivity Toolbox}[https://sites.google.com/site/bctnet/]
-- {Easy Plot EEG Brain Network Matlab}[https://nl.mathworks.com/matlabcentral/fileexchange/57372-easy-plot-eeg-brain-network-matlab]
-- {SmallWorldNess}[https://github.com/mdhumphries/SmallWorldNess]
+- BCT: [Brain Connectivity Toolbox](https://sites.google.com/site/bctnet/)
+- [Easy Plot EEG Brain Network Matlab](https://nl.mathworks.com/matlabcentral/fileexchange/57372-easy-plot-eeg-brain-network-matlab)
+- [SmallWorldNess](https://github.com/mdhumphries/SmallWorldNess)
 
 ## Data 
-Data is shared on {Google Drive}[https://drive.google.com/drive/folders/1iOfnVZHHtJ_PpHSq12LXOsmPE9AF9J9J?usp=sharing]
+Data is shared on [Google Drive](https://drive.google.com/drive/folders/1iOfnVZHHtJ_PpHSq12LXOsmPE9AF9J9J?usp=sharing)
 
 ## Steps
 1. Run pre_proc.m
