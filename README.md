@@ -2,16 +2,16 @@
 
 ## Steps
 1. Run pre_proc.m
-- genertae dataset in the eeglab and filedtrip format 
-- resample 128Hz
-- filter 1-45Hz
-- remove first and last 5s
-- obtain the last 15s as intereated data
-- remove DC channels (signals with zero value)
+- Genertae dataset in the eeglab and filedtrip format 
+- Resample 128Hz
+- Filter 1-45Hz
+- Remove first and last 5s
+- Obtain the last 15s as intereated data
+- Remove DC channels (signals with zero value)
 - MARA: remove noise components,  and drop the data if its artificat components is > 60% of all ica components
-- save remains into data/useful directory
+- Save remains into data/useful directory
 
-- finally we have:
+- Finally we have:
     - 22 trials for competition
     - 25 trials for cooperation
     - check data/info.txt file
@@ -27,68 +27,66 @@ Here, 1409 frequwncy (ranging from 0 to 45Hz) and  60 timepoints (ranging from 0
 
 
 3. Run conn_cal.m to calculate inter-brain synchcrony over frequency and/or time
-- over frequency and time: 
+- Over frequency and time: 
     - ispc, spectral-coherence,pli,power-correlation: beta band (13-30)
     - MI: gamma band (31-45), 1000 bins 
 
 - Calcculate functional connectiveity over frequency and over time: power-correlation and ISPC(phase-based)
 
-4. run conn_combined.m
+4. Run conn_combined.m
 - Combine each trials into one mat
 
-5. run conn_sig.m /conn_sig_permutation.m
+5. Run conn_sig.m /conn_sig_permutation.m
 - Conn_sig.m: 
-    1. do non-parametric test, get the real p value, 
-    2. do permutation test get 1000 p-value
-    3. test the real-p value weather is significant in all p-values 
-- conn_sig_permutation.m:
-    - permutation test with 500 shuffles ( threshold: 1%)
+    1. Do non-parametric test, get the real p value, 
+    2. Do permutation test get 1000 p-value
+    3. Test the real-p value weather is significant in all p-values 
+- Conn_sig_permutation.m:
+    - Permutation test with 500 shuffles ( threshold: 1%)
     - Mannes recommended: the results paper applied
 
 - False discrovery rate: 5%
 
-6. run plot_network_group.m;
+6. Run plot_network_group.m;
 
 - Plot_network_group.m;
-    - plot strong NS: addjacency matrix and brain maps
-    - threshold: one std + median of intra- and inter-brain NS
-    - outliers(a value that is more than three scaled median absolute deviations) were removed 
+    - Plot strong NS: addjacency matrix and brain maps
+    - Threshold: one std + median of intra- and inter-brain NS
+    - Outliers(a value that is more than three scaled median absolute deviations) were removed 
     
     - Commented code: plot granger causality in the end of this file
 
 - plot_network_group2.m:
-    - plot strong NS in brain maps
-    - threshold:
+    - Plot strong NS in brain maps
+    - Threshold:
         - for intra-brain NS, the threshold is visually detected by the distribution of intra-brain NS
         - for INS, the top 10 highest INSs were chosen 
 
+- Plot_NS_over_time_freq:
+    - Plot all intra- and inter-brain NS over time and frequency, 
+    - Time-consusing since there 441 plot for frequency and time and each trial 
 
-
-6.2.plot_NS_over_time_freq:
-- plot all intra- and inter-brain NS over time and frequency, 
-- time-consusing since there 441 plot for frequency and time and each trial 
-
-6.3 plot_net_prop_over_freq.m
-- Plot the boxplot of gloabl efficien and small-world-ness over frequncy/time 
-- Plot the lineplot of GE/SWN of the median of team-brain network over frequency/tiime 
+- Plot_net_prop_over_freq.m
+    - Plot the boxplot of gloabl efficiency and small-world-ness over frequncy/time 
+    - Plot the lineplot of GE/SWN of the median of team-brain network over frequency/tiime 
 
 
 
-7. run network_properties.m
+7. Run network_properties.m
 
-- calcualate unthresholded weighted network properties and save into data/conn
+- Calcualate unthresholded weighted network properties and save into data/conn
 - Brain Connectivity Toolbox(BCT) should be added into path
 
-8. run cal_smallworldness.m 
+8. Run cal_smallworldness.m 
 
-- method: Based on ER random network and transitivity clustering coefficient 
-- add path the library smallworldness-matser 
-- calculate SWN of intra- and team-brain network 
+- Method: Based on ER random network and transitivity clustering coefficient 
+- Add path the library smallworldness-matser 
+- Calculate SWN of intra- and team-brain network 
 
 9. GE_cal: calculate global efficiency 
 
-- calculate GE of intra- and team-brain netwroks
-- add path Brain Connectivity Toolbox 
+- Calculate GE of intra- and team-brain netwroks
+- Add path Brain Connectivity Toolbox 
 
 
 9. Run behavorial_glm.m
