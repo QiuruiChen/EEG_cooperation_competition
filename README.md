@@ -1,5 +1,42 @@
 ## Team neural dynamic analysis during cooperation and comeptition with EEG
 
+## Summary 
+
+The ’social brain’ has become a central focus of interest in neuroscience research in order to define the neurophysiological basis of social behavior and inter-subjective interactions. Cooperation and competition, in particular, can be considered as a social interaction between two or more agents who intend to facilitate, but also obstruct, others goal achievement. This paper aims to analyze team neurodynamics during cooperative and competitive interactions.
+
+This study set out to analyze team neurodynamics during cooperative and competitive interaction with  EEG in four directions: (1) analyzing to what extent are neural synchronization measurements robust to the noise; (2) analyzing team neurodynamics based on different neural synchrony measurements (3) explaining neural synchrony in graph theory (4) relating team neurodynamics with team performance. 
+
+18 subjects (9 pairs) participated in the experiment, playing competitive and cooperative computer pong games in dyads with EEG. Five functional connectivity methods were applied to quantify neural synchronies: intersite phase clustering, phase lag index, spectral coherence, power correlation and mutual information. Team brain networks were generated based on intra- and inter-brain neural synchrony. Topological properties of brain networks, which include small-world-ness, global efficiency and betweenness centrality, were calculated to quantify team neurodynamics.
+
+The results show that: 
+1. With regard to robust of neural synchrony measurements: mutual information is very sensitive to noise; power-correlation is the least noise-sensitive NS measurement; phase-lag-index can lose some significant neural synchronies; intersite phase clustering and spectral-coherence have similar sensitivity to white noise; 
+2. Intra-brain neural synchronization shows prefrontal and parastriatel were highly activated on cooperation and competition; 
+3. Neural synchrony is unstable over frequency and fluctuate dramatically over time; 
+4. Inter-brain synchrony on cooperation is slightly stronger than interpersonal synchrony on competition; 
+5. Inter-brain synchrony does not highly correlate with team-performance; 
+6.  Intra-brain network exchange information more efficient than team-brain network; 
+7.  Individual brain exchanges information more efficient on competition as compared with cooperation; 
+8. Individual brain network has more clusters on cooperation as compared with competition; 
+9. Team-brain network has more cluster as compared with individual-brain network; 
+10. Global efficiency and small-world-ness of brain networks are relatively unstable over time and relatively stable over frequency; 
+11.  Small-world-ness of intersite-phase-clustering-based networks has large variance;
+12. Brain hubs changes over time; 
+13. Statistically significant INS between cooperation and competition dynamically changes over time, frequency and among different neural synchrony measurements.
+
+This research has many limitations. As regards the experiment, pong-game can not perfectly imitate cooperation and competition; dyads are acquaintances instead of close friends; experiments were not conducted in a quiet environment; there was no baseline experiment in this research to compare cooperative or competitive scenario as neural patterns may be not elicited by cooperation or competition. With
+regard to methodologies: only one arbitrary frequency band (beta) was applied in this study instead of multiple frequency bands, while results showed that neural synchrony is unstable over frequency; data were averaged over time while neural synchrony fluctuates dramatically over time; there are many variance definitions of the topological properties (s.t., brain hubs could be measured by betweenness centrality or degree centrality), but this research only applied one definition by time constraint.
+
+In the future work, experiments could be redesigned to better imitate cooperative and competitive interactions. More subjects (close friends) could be recruited with similar age. Results could be analyzed over time or frequency instead of averaging on time and frequency. Baseline experiments could be conducted (in human-tomachine setting or the same game setting without social interaction). Topological properties could be calculated based on different definitions. Multi-layer network could be generated in temporal or frequency domain.
+
+## Software Packages 
+- EEGLab
+- BCT: [Brain Connectivity Toolbox]{https://sites.google.com/site/bctnet/}
+- [Easy Plot EEG Brain Network Matlab]{https://nl.mathworks.com/matlabcentral/fileexchange/57372-easy-plot-eeg-brain-network-matlab}
+- [SmallWorldNess]{https://github.com/mdhumphries/SmallWorldNess}
+
+## Data 
+Data is shared on [Google Drive]{https://drive.google.com/drive/folders/1iOfnVZHHtJ_PpHSq12LXOsmPE9AF9J9J?usp=sharing} 
+
 ## Steps
 1. Run pre_proc.m
 - Genertae dataset in the eeglab and filedtrip format 
